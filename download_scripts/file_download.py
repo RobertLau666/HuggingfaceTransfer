@@ -2,7 +2,7 @@ import time
 from huggingface_hub import hf_hub_download
 
 repo_id = "timbrooks/instruct-pix2pix"
-root_dir = './temp'
+root_dir = '../temp'
 local_dir = root_dir + '/' + repo_id.replace('/','_')
 cache_dir = local_dir + "/cache"
 filename= "unet/diffusion_pytorch_model.bin"
