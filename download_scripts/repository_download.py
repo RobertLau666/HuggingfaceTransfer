@@ -2,7 +2,7 @@ import time
 from huggingface_hub import snapshot_download
 
 repo_id = "SG161222/RealVisXL_V3.0"
-root_dir = '/dfs/comicai/chenyu.liu/hf_download/temp'
+root_dir = './temp'
 local_dir = root_dir + '/' + repo_id.replace('/','_')
 cache_dir = local_dir + "/cache"
 
