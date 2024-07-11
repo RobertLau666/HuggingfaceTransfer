@@ -15,7 +15,7 @@ try:
     snapshot_download(
         cache_dir=cache_dir,
         local_dir=local_dir,
-        repo_type="space", # Accepted repo types are: [None (default), 'model', 'dataset', 'space']
+        repo_type=None, # Accepted repo types are: [None (default), 'model', 'dataset', 'space']
         repo_id=repo_id,
         local_dir_use_symlinks=False,
         resume_download=True,
