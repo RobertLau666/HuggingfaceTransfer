@@ -19,8 +19,8 @@ try:
         repo_id=repo_id,
         local_dir_use_symlinks=False,
         resume_download=True,
-        allow_patterns=["*.model", "*.safetensors", "*.onnx", "*.pt", "*.pth", "*.ckpt", "*.bin", "*.msgpack", "*.csv", "*.json", "*.png", "*.jpg", "*.py", "*.md", "*.txt", "*.gitattributes", "*.ipynb"],
-        ignore_patterns=["*.h5", "*.ot",],
+        allow_patterns=None, # ["*.model", "*.safetensors", "*.onnx", "*.pt", "*.pth", "*.ckpt", "*.bin", "*.msgpack", "*.csv", "*.json", "*.png", "*.jpg", "*.py", "*.md", "*.txt", "*.gitattributes", "*.ipynb"],
+        ignore_patterns=None, # ["*.h5", "*.ot",],
     )
 except Exception as e:
     print(e)
