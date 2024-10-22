@@ -19,7 +19,7 @@ try:
         repo_id=repo_id,
         local_dir_use_symlinks=False,
         resume_download=True,
-        allow_patterns=["*.model", "*.safetensors", "*.onnx", "*.pt", "*.pth", "*.ckpt", "*.bin", "*.msgpack", "*.json", "*.png", "*.jpg", "*.py", "*.md", "*.txt", "*.gitattributes", "*.ipynb"],
+        allow_patterns=["*.model", "*.safetensors", "*.onnx", "*.pt", "*.pth", "*.ckpt", "*.bin", "*.msgpack", "*.csv", "*.json", "*.png", "*.jpg", "*.py", "*.md", "*.txt", "*.gitattributes", "*.ipynb"],
         ignore_patterns=["*.msgpack", "*.h5", "*.ot",],
     )
 except Exception as e:
