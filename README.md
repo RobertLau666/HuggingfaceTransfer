@@ -15,7 +15,9 @@ export ALL_PROXY=http://127.0.0.1:7890
 ```
 curl www.google.com
 ```
-
+### huggingface token
+在huggingface的[Access Tokens](https://huggingface.co/settings/tokens)中创建并获取token，并存放在config.py的token中
+Create and Access [Access Tokens] (https://huggingface.co/settings/tokens) in huggingface, and store it in parameter ```token``` of config.py.
 ## Usge
 ### Download the entire repository
 ```
@@ -25,4 +27,8 @@ python repository_download.py
 It will automatically download to the previous path, no dragging
 ```
 python file_download.py
+```
+### Upload a single file
+```
+python file_upload.py
 ```

@@ -1,29 +1,32 @@
 import time
-from huggingface_hub import hf_hub_download
+from huggingface_hub import snapshot_download, login
 from util import create_dir_or_file
+from config import token
 
-repo_id = "diffusers/stable-diffusion-xl-1.0-inpainting-0.1"
-root_dir = '../temp'
+
+login(token=token)
+
+repo_id = "HVSiniX/RawVideoDriven"
+root_dir = 'temp'
 local_dir = root_dir + '/' + repo_id.replace('/','_')
 cache_dir = local_dir + "/cache"
-filename= "text_encoder/model.fp16.safetensors"
 
 create_dir_or_file(root_dir)
 create_dir_or_file(local_dir)
 create_dir_or_file(cache_dir)
 
 try:
-    hf_hub_download(
+    snapshot_download(
         cache_dir=cache_dir,
         local_dir=local_dir,
         repo_type=None, # Accepted repo types are: [None (default), 'model', 'dataset', 'space']
         repo_id=repo_id,
-        filename=filename,
         local_dir_use_symlinks=False,
         resume_download=True,
-        etag_timeout=100
+        allow_patterns=None,
+        ignore_patterns=None,
     )
 except Exception as e:
     print(e)
 else:
-    print('下载完成')
+    print(f"Download '{repo_id}' finished!")

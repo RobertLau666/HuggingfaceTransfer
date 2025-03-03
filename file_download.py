@@ -1,28 +1,30 @@
 import time
-from huggingface_hub import snapshot_download
+from huggingface_hub import hf_hub_download
 from util import create_dir_or_file
 
-repo_id = "csebuetnlp/mT5_multilingual_XLSum"
-root_dir = '../temp'
+
+repo_id = "QuanSun/EVA-CLIP"
+root_dir = 'temp'
 local_dir = root_dir + '/' + repo_id.replace('/','_')
 cache_dir = local_dir + "/cache"
+filename= "EVA02_CLIP_L_336_psz14_s6B.pt"
 
 create_dir_or_file(root_dir)
 create_dir_or_file(local_dir)
 create_dir_or_file(cache_dir)
 
 try:
-    snapshot_download(
+    hf_hub_download(
         cache_dir=cache_dir,
         local_dir=local_dir,
         repo_type=None, # Accepted repo types are: [None (default), 'model', 'dataset', 'space']
         repo_id=repo_id,
+        filename=filename,
         local_dir_use_symlinks=False,
         resume_download=True,
-        allow_patterns=None, # ["*.model", "*.safetensors", "*.onnx", "*.pt", "*.pth", "*.ckpt", "*.bin", "*.msgpack", "*.csv", "*.json", "*.png", "*.jpg", "*.py", "*.md", "*.txt", "*.gitattributes", "*.ipynb"],
-        ignore_patterns=None, # ["*.h5", "*.ot",],
+        etag_timeout=100
     )
 except Exception as e:
     print(e)
 else:
-    print('下载完成')
+    print(f"Download '{filename}' finished!")

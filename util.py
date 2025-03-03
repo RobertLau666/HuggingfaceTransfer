@@ -1,5 +1,6 @@
 import os
 
+
 def create_dir_or_file(path):
     if not os.path.exists(path):
         file_name, file_extension = os.path.splitext(path)
@@ -10,6 +11,7 @@ def create_dir_or_file(path):
                 with open(path, 'w') as file:
                     pass
 
+
 if __name__ == "__main__":
-    path = '../temp'
+    path = 'temp'
     create_dir_or_file(path)
