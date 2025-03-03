@@ -16,7 +16,7 @@ export ALL_PROXY=http://127.0.0.1:7890
 curl www.google.com
 ```
 ### Setting huggingface token
-Create and Access [Access Tokens] (https://huggingface.co/settings/tokens) in huggingface, and store it in parameter ```token``` of config.py.
+Create and get [Access Tokens](https://huggingface.co/settings/tokens) in huggingface, and store it in parameter ```token``` of config.py.
 ## Usge
 ### Download the entire repository
 ```
