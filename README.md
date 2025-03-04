@@ -23,6 +23,10 @@ Create and get [Access Tokens](https://huggingface.co/settings/tokens) in [Huggi
 ```
 python repository_download.py
 ```
+or Clone repository, e.g.:
+```
+git clone https://huggingface.co/spaces/omni-research/Tarsier2-7b
+```
 ### Download a single file
 It will automatically download to the previous path, no dragging
 ```
