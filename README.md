@@ -19,20 +19,26 @@ curl www.google.com
 ### Setting huggingface token
 Create and get [Access Tokens](https://huggingface.co/settings/tokens) in [Hugging Face](https://huggingface.co/), and store it in parameter ```token``` of config.py.
 ## Usge
-### Download the entire repository
+### Download
+#### Entire repository
 ```
-python repository_download.py
+python download_repository.py
 ```
 or Clone repository, e.g.:
 ```
 git clone https://huggingface.co/spaces/omni-research/Tarsier2-7b
 ```
-### Download a single file
+#### A single file
 It will automatically download to the previous path, no dragging
 ```
-python file_download.py
+python download_file.py
 ```
-### Upload a single file
+### Upload
+#### files under folder
 ```
-python file_upload.py
+python upload_folder.py
+```
+#### A single file
+```
+python upload_file.py
 ```
