@@ -14,21 +14,17 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 ### 1. [clash-for-linux-backup](https://github.com/Elegycloud/clash-for-linux-backup) (recommend)
 
-### 2. others
-
+### 2. other methods
 #### Setting global proxy
-
 ```
 export ALL_PROXY=http://127.0.0.1:7890
 ```
-
 #### Verify that the configuration is successful
-
 ```
 curl www.google.com
 ```
 
-## Download method
+## Download methods
 
 ### 1. [huggingface-cli](https://hf-mirror.com/docs/huggingface_hub/guides/download#download-from-the-cli) (recommend)
 
