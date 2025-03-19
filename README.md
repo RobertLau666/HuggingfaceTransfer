@@ -34,6 +34,10 @@ curl www.google.com
 
 huggingface-cli is a command line tool provided by Hugging Face, which provides a perfect downloading function.
 
+```Network Proxy Configuration``` is not required.
+
+reference link: https://hf-mirror.com.
+
 ```shell
 # 1. Install
 pip install -U huggingface_hub
@@ -46,21 +50,20 @@ $env:HF_ENDPOINT = "https://hf-mirror.com"
 
 # 3. Download
 # --repo-type: model, dataset, space
-# 可以添加 --local-dir-use-symlinks False 禁用文件软链接，这样下载路径下所见即所得，详细解释请见上面提到的教程。
+# You can add --local-dir-use-symlinks False to disable soft links to files so that what you see is what you get under the download path, as explained in the tutorial mentioned above.
 huggingface-cli download --repo-type model --resume-download xx/xx --local-dir xx_xx
-for example：
+
+# for example: 
 # 3.1 Download model
 huggingface-cli download --repo-type model --resume-download QuanSun/EVA-CLIP --local-dir QuanSun_EVA-CLIP
 # 3.2 Download dataset
 huggingface-cli download --repo-type dataset --resume-download wikitext --local-dir wikitext
 # 3.2 Download space
 huggingface-cli download --repo-type space --resume-download depth-anything/Depth-Anything-V2 --local-dir depth-anything_Depth-Anything-V2
-
-
 ```
 
 ### 2. huggingface_hub
-
+```Network Proxy Configuration``` is required.
 ####  Setting huggingface token
 
 Create and get [Access Tokens](https://huggingface.co/settings/tokens) in [Hugging Face](https://huggingface.co/), and store it in parameter ``token`` of config.py.
@@ -73,7 +76,7 @@ Create and get [Access Tokens](https://huggingface.co/settings/tokens) in [Huggi
 python download_repository.py
 ```
 
-or Clone repository, e.g.:
+Or clone repository, e.g.:
 
 ```
 git clone https://huggingface.co/spaces/omni-research/Tarsier2-7b
