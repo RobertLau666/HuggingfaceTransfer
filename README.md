@@ -51,11 +51,18 @@ huggingface-cli download --repo-type model --resume-download xx/xx --local-dir x
 
 # for example: 
 # 3.1 Download model
-huggingface-cli download --repo-type model --resume-download QuanSun/EVA-CLIP --local-dir QuanSun_EVA-CLIP
+huggingface-cli download --repo-type model --resume-download RobertLau/convnext --local-dir RobertLau_convnext
 # 3.2 Download dataset
 huggingface-cli download --repo-type dataset --resume-download wikitext --local-dir wikitext
 # 3.2 Download space
 huggingface-cli download --repo-type space --resume-download depth-anything/Depth-Anything-V2 --local-dir depth-anything_Depth-Anything-V2
+
+# 4. Upload
+# You can either upload a single file or an entire folder: (This method has not been proven to work)
+# Usage:  huggingface-cli upload [repo_id] [local_path] [path_in_repo]
+# >>> huggingface-cli upload Wauplin/my-cool-model ./models/model.safetensors model.safetensors https://huggingface.co/Wauplin/my-cool-model/blob/main/model.safetensors
+huggingface-cli upload RobertLau/ChildClassification /share/chenyuliu/others/child_train/checkpoint/traintitle:base_trainindex:14/20250320034325/output_focal_convnext/traintitle:base_trainindex:14_20250320034325_output_focal_convnext_epoch:18.pth https://huggingface.co/RobertLau/ChildClassification/blob/main/base/traintitle%3Abase_trainindex%3A14_20250320034325_output_focal_convnext_epoch%3A18.pth
+
 ```
 
 ### 2. huggingface_hub
