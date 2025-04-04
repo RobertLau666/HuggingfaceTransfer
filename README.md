@@ -39,7 +39,7 @@ reference link: https://hf-mirror.com.
 pip install -U huggingface_hub
 
 # 2. Setting environment variables
-# Linux: It is recommended to write the previous line to ~/.bashrc.
+# Linux: It is recommended to write the previous line to ~/.bashrc, or you must rerun in each terminal which need download.
 export HF_ENDPOINT=https://hf-mirror.com
 # Windows Powershell
 $env:HF_ENDPOINT = "https://hf-mirror.com"
