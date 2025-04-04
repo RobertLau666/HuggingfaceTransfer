@@ -57,6 +57,9 @@ huggingface-cli download --repo-type dataset --resume-download wikitext --local-
 # 3.2 Download space
 huggingface-cli download --repo-type space --resume-download depth-anything/Depth-Anything-V2 --local-dir depth-anything_Depth-Anything-V2
 
+# Some files may fail to be downloaded after the preceding command is executed. Do not run the preceding command again. Instead, add '--include', for example, run the following  command to download missing files one by one.
+huggingface-cli download --repo-type dataset BestWishYsh/ConsisID-preview-Data --include "masks/masks.tar.partaa" --local-dir .
+
 # 4. Upload
 # You can either upload a single file or an entire folder: (This method has not been proven to work)
 # Usage:  huggingface-cli upload [repo_id] [local_path] [path_in_repo]
