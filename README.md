@@ -59,6 +59,8 @@ huggingface-cli download --repo-type space --resume-download depth-anything/Dept
 
 # Some files may fail to be downloaded after the preceding command is executed. Do not run the preceding command again. Instead, add '--include', for example, run the following  command to download missing files one by one.
 huggingface-cli download --repo-type dataset BestWishYsh/ConsisID-preview-Data --include "masks/masks.tar.partaa" --local-dir .
+# If it is a certain folder
+huggingface-cli download --repo-type dataset BestWishYsh/ConsisID-preview-Data --include "masks/*" --local-dir .
 
 # 4. Upload
 # You can either upload a single file or an entire folder: (This method has not been proven to work)
