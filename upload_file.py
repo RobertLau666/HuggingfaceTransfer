@@ -9,8 +9,8 @@ api = HfApi()
 # 仓库信息
 repo_id = "RobertLau/ChildClassification"  # 替换为你的仓库名称
 repo_type = "model"  # 仓库类型，可选值: [None (默认), 'model', 'dataset', 'space']
-file_path = "/share/chenyuliu/others/child_train/checkpoint/traintitle:base_trainindex:14/20250320034325/output_focal_convnext/traintitle:base_trainindex:14_20250320034325_output_focal_convnext_epoch:18.pth"  # 替换为本地文件路径
-path_in_repo = "traintitle:base_trainindex:14_20250320034325_output_focal_convnext_epoch:18.pth"  # 文件在仓库中的路径（可自定义）
+file_path = "/data/code/chenyu.liu/others/child_train/ChildClassification/checkpoint/traintitle:anime_trainindex:6/20250514013432/output_focal_convnext/traintitle:anime_trainindex:6_20250514013432_output_focal_convnext_epoch:29.pth"  # 替换为本地文件路径
+path_in_repo = "anime/traintitle:anime_trainindex:6_20250514013432_output_focal_convnext_epoch:29.pth"  # 文件在仓库中的路径（可自定义）
 
 # 检查仓库是否存在
 try:
