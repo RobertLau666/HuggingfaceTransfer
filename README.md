@@ -52,11 +52,17 @@ huggingface-cli download --repo-type model --resume-download xx/xx --local-dir x
 # for example: 
 # 3.1 Download model
 huggingface-cli download --repo-type model --resume-download RobertLau/convnext --local-dir RobertLau_convnext
+huggingface-cli download --repo-type model --resume-download facebook/detr-resnet-50 --local-dir facebook_detr-resnet-50
+huggingface-cli download --repo-type model --resume-download skytnt/anime-aesthetic --local-dir skytnt_anime-aesthetic
+huggingface-cli download --repo-type model --resume-download google/gemma-3n-e4b-it --local-dir google_gemma-3n-e4b-it
+# Some files may fail to be downloaded after the preceding command is executed. Do not run the preceding command again. Instead, add '--include', for example, run the following  command to download missing files one by one.
+huggingface-cli download --repo-type model google/gemma-3n-e4b-it --include "model-00002-of-00004.safetensors" --local-dir .
+
 # 3.2 Download dataset
 huggingface-cli download --repo-type dataset --resume-download wikitext --local-dir wikitext
+
 # 3.2 Download space
 huggingface-cli download --repo-type space --resume-download depth-anything/Depth-Anything-V2 --local-dir depth-anything_Depth-Anything-V2
-
 # Some files may fail to be downloaded after the preceding command is executed. Do not run the preceding command again. Instead, add '--include', for example, run the following  command to download missing files one by one.
 huggingface-cli download --repo-type dataset BestWishYsh/ConsisID-preview-Data --include "masks/masks.tar.partaa" --local-dir .
 # If it is a certain folder

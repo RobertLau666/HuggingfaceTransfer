@@ -6,7 +6,7 @@ from config import token
 
 login(token=token)
 
-repo_id = "omni-research/Tarsier2-Recap-7b"
+repo_id = "Fuyucchi/yolov8_animeface"
 root_dir = 'temp'
 local_dir = root_dir + '/' + repo_id.replace('/','_')
 cache_dir = local_dir + "/cache"
