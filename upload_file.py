@@ -9,8 +9,12 @@ api = HfApi()
 # 仓库信息
 repo_id = "RobertLau/ChildClassification"  # 替换为你的仓库名称
 repo_type = "model"  # 仓库类型，可选值: [None (默认), 'model', 'dataset', 'space']
-file_path = "/data/code/chenyu.liu/others/child_train/ChildClassification/checkpoint/traintitle:style_trainindex:3/20250630085014/output_focal_convnext/traintitle:style_trainindex:3_20250630085014_output_focal_convnext_epoch:23.pth"  # 替换为本地文件路径
-path_in_repo = "style/traintitle:style_trainindex:3_20250630085014_output_focal_convnext_epoch:23.pth"  # 文件在仓库中的路径（可自定义）
+# file_path = "/data/code/chenyu.liu/others/child_train/checkpoint/traintitle-real_trainindex-2/20250805111029/output_focal_convnext/traintitle-real_trainindex-2_20250805111029_output_focal_convnext_epoch-20.pth"  # 替换为本地文件路径
+# file_path = "/data/code/chenyu.liu/others/child_train/checkpoint/traintitle-beauty_trainindex-4/20250926075037/output_focal_convnext/traintitle-beauty_trainindex-4_20250926075037_output_focal_convnext_epoch-14.pth"
+# file_path = "/data/code/chenyu.liu/others/child_train/checkpoint/traintitle-beauty_trainindex-5/20250928064950/output_focal_convnext/traintitle-beauty_trainindex-5_20250928064950_output_focal_convnext_epoch-9.pth"
+# path_in_repo = "beauty/traintitle-beauty_trainindex-5_20250928064950_output_focal_convnext_epoch-9.pth"  # 文件在仓库中的路径（可自定义）
+file_path = "/data/code/chenyu.liu/trash_/model_ensemble/models/beauty_1014_model123_beauty567.pth"
+path_in_repo = "beauty/beauty_1014_model123_beauty567.pth"  # 文件在仓库中的路径（可自定义）
 
 # 检查仓库是否存在
 try:

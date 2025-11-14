@@ -55,14 +55,43 @@ huggingface-cli download --repo-type model --resume-download RobertLau/convnext 
 huggingface-cli download --repo-type model --resume-download facebook/detr-resnet-50 --local-dir facebook_detr-resnet-50
 huggingface-cli download --repo-type model --resume-download skytnt/anime-aesthetic --local-dir skytnt_anime-aesthetic
 huggingface-cli download --repo-type model --resume-download google/gemma-3n-e4b-it --local-dir google_gemma-3n-e4b-it
+huggingface-cli download --repo-type model --resume-download SliverHand/RealESRGAN_x4plus --local-dir SliverHand_RealESRGAN_x4plus
+huggingface-cli download --repo-type model --resume-download Lightricks/LTX-Video-0.9.7-dev --local-dir Lightricks_LTX-Video-0.9.7-dev
+huggingface-cli download --repo-type model --resume-download Lightricks/ltxv-spatial-upscaler-0.9.7 --local-dir Lightricks_ltxv-spatial-upscaler-0.9.7
+huggingface-cli download --repo-type model --resume-download Wan-AI/Wan2.1-I2V-14B-720P-Diffusers --local-dir Wan-AI_Wan2.1-I2V-14B-720P-Diffusers
+huggingface-cli download --repo-type model --resume-download OpenGVLab/InternVideo2_5_Chat_8B --local-dir OpenGVLab_InternVideo2_5_Chat_8B
+huggingface-cli download --repo-type model --resume-download PhilipC/HumanOmniV2 --local-dir PhilipC_HumanOmniV2
+huggingface-cli download --repo-type model --resume-download Video-R1/Video-R1-7B --local-dir Video-R1_Video-R1-7B
+huggingface-cli download --repo-type model --resume-download Kwai-Keye/Keye-VL-8B-Preview --local-dir Kwai-Keye_Keye-VL-8B-Preview
+huggingface-cli download --repo-type model --resume-download omni-research/Tarsier-34b --local-dir omni-research_Tarsier-34b
+huggingface-cli download --repo-type model --resume-download omni-research/Tarsier-7b --local-dir omni-research_Tarsier-7b
+huggingface-cli download --repo-type model --resume-download Lightricks/LTX-Video-0.9.8-13B-distilled --local-dir Lightricks_LTX-Video-0.9.8-13B-distilled
+huggingface-cli download --repo-type model --resume-download csebuetnlp/mT5_multilingual_XLSum --local-dir csebuetnlp_mT5_multilingual_XLSum
+huggingface-cli download --repo-type model --resume-download CompVis/stable-diffusion-v1-4 --local-dir CompVis_stable-diffusion-v1-4
+huggingface-cli download --repo-type model --resume-download openai/clip-vit-large-patch14 --local-dir openai_clip-vit-large-patch14
+huggingface-cli download --repo-type model --resume-download booksforcharlie/stable-diffusion-inpainting --local-dir booksforcharlie_stable-diffusion-inpainting
+huggingface-cli download --repo-type model --resume-download CompVis/stable-diffusion-safety-checker --local-dir CompVis_stable-diffusion-safety-checker
+huggingface-cli download --repo-type model --resume-download CompVis/stable-diffusion-v-1-4-original --local-dir CompVis_stable-diffusion-v-1-4-original
+huggingface-cli download --repo-type model --resume-download google/flan-t5-xl --local-dir google_flan-t5-xl
+huggingface-cli download --repo-type model --resume-download microsoft/phi-2 --local-dir microsoft_phi-2
+huggingface-cli download --repo-type model --resume-download Qwen/Qwen3-4B-Base --local-dir Qwen_Qwen3-4B-Base
 # Some files may fail to be downloaded after the preceding command is executed. Do not run the preceding command again. Instead, add '--include', for example, run the following  command to download missing files one by one.
 huggingface-cli download --repo-type model google/gemma-3n-e4b-it --include "model-00002-of-00004.safetensors" --local-dir .
+huggingface-cli download --repo-type model Kijai/WanVideo_comfy --include "Wan21_CausVid_14B_T2V_lora_rank32.safetensors" --local-dir .
+huggingface-cli download --repo-type model PhilipC/HumanOmniV2 --include "model-00001-of-00004.safetensors" --local-dir .
+huggingface-cli download --repo-type model omni-research/Tarsier-7b --include "model-00001-of-00003.safetensors" --local-dir .
+huggingface-cli download --repo-type model Lightricks/LTX-Video-0.9.8-13B-distilled --include "transformer/diffusion_pytorch_model-00004-of-00006.safetensors" --local-dir .
+huggingface-cli download --repo-type model SanctumAI/Meta-Llama-3-8B-Instruct-GGUF --include "meta-llama-3-8b-instruct.Q4_0.gguf" --local-dir .
 
 # 3.2 Download dataset
 huggingface-cli download --repo-type dataset --resume-download wikitext --local-dir wikitext
 
 # 3.2 Download space
 huggingface-cli download --repo-type space --resume-download depth-anything/Depth-Anything-V2 --local-dir depth-anything_Depth-Anything-V2
+huggingface-cli download --repo-type space --resume-download multimodalart/wan2-1-fast --local-dir multimodalart_wan2-1-fast
+huggingface-cli download --repo-type space --resume-download Miragic-AI/Miragic-Speed-Painting --local-dir Miragic-AI_Miragic-Speed-Painting
+huggingface-cli download --repo-type space --resume-download Kwai-Keye/Keye-VL-8B-Preview --local-dir Kwai-Keye_Keye-VL-8B-Preview
+huggingface-cli download --repo-type space --resume-download hysts/PnP-diffusion-features --local-dir hysts_PnP-diffusion-features
 # Some files may fail to be downloaded after the preceding command is executed. Do not run the preceding command again. Instead, add '--include', for example, run the following  command to download missing files one by one.
 huggingface-cli download --repo-type dataset BestWishYsh/ConsisID-preview-Data --include "masks/masks.tar.partaa" --local-dir .
 # If it is a certain folder
